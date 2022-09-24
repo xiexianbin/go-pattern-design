@@ -14,11 +14,20 @@
 
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
 func main() {
-	fmt.Println(time.Now().Format("2006-01-02 15:04:05"))
+	isMatch := func(i int) bool {
+		switch i {
+		case 1:
+		case 2:
+			return true
+		}
+		return false
+	}
+
+	fmt.Println(isMatch(1))
+	fmt.Println(isMatch(2))
 }
+
+// false, true
